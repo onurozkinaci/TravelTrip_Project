@@ -1,0 +1,21 @@
+﻿@using TravelTripProject.Models.Classes
+@model List<Hakkimizda>
+ 
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <h3>About</h3>
+            @foreach (var item in Model)
+            {
+                <img src="@item.ImageUrl" alt="" />
+                <p>@item.Description</p>
+            }
+        </div>
+    </div>
+</div>
+
