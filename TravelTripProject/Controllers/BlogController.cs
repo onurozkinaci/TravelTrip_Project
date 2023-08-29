@@ -17,7 +17,7 @@ namespace TravelTripProject.Controllers
         {
             //var blogs = context.Blogs.ToList(); //var blogs yerine List<Blog> da kullanilabilir.
             blogYorum.Deger1 = context.Blogs.ToList();
-            blogYorum.Deger3 = context.Blogs.OrderByDescending(x=>x.Date).Take(3).ToList(); //son 3 blogu dondurur.
+            blogYorum.Deger3 = context.Blogs.OrderByDescending(x=>x.ID).Take(3).ToList(); //son 3 blogu dondurur.
             //------
             blogYorum.Deger4 = context.Yorumlars.OrderByDescending(x => x.ID).Take(3).ToList(); //son 3 yorumu dondurur.
             //------
@@ -31,7 +31,7 @@ namespace TravelTripProject.Controllers
             blogYorum.Deger1 = context.Blogs.Where(x => x.ID == id).ToList();
             blogYorum.Deger2 = context.Yorumlars.Where(x => x.BlogId == id).ToList();
             //----------
-            blogYorum.Deger3 = context.Blogs.OrderByDescending(x => x.Date).Take(3).ToList(); //son 3 blogu dondurur.
+            blogYorum.Deger3 = context.Blogs.OrderByDescending(x => x.ID).Take(3).ToList(); //son 3 blogu dondurur.
             blogYorum.Deger4 = context.Yorumlars.OrderByDescending(x => x.ID).Take(3).ToList(); //son 3 yorumu dondurur.
             //----------
             return View(blogYorum);

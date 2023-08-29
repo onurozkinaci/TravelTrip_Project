@@ -14,7 +14,7 @@ namespace TravelTripProject.Controllers
         // GET: Default
         public ActionResult Index()
         {
-            var values = context.Blogs.ToList(); //bloglari view'e iletip bloglarin resimlerini anasayfada slider icin kullaniyoruz.
+            var values = context.Blogs.OrderByDescending(x=>x.ID).Take(8).ToList(); //bloglari view'e iletip bloglarin resimlerini anasayfada slider icin kullaniyoruz.Son 8 blogun resimleri baz alinacak, bu sebeple "OrderByDescending(x=>x.ID).Take(8)" kullanimina basvuruldu.
             return View(values);
         }
         public ActionResult About() {
@@ -30,6 +30,20 @@ namespace TravelTripProject.Controllers
         public PartialViewResult Partial2()
         {
             var values = context.Blogs.Where(x => x.ID == 2).ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult Partial3() {
+            var values = context.Blogs.OrderByDescending(x=>x.ID).Take(10).ToList(); //son 10 blogu getirmek icin
+            return PartialView(values);
+        }
+        public PartialViewResult Partial4()
+        {
+            var values = context.Blogs.Take(3).ToList(); //ilk 3 blogu getirmek icin
+            return PartialView(values);
+        }
+
+        public PartialViewResult Partial5() {
+            var values = context.Blogs.OrderByDescending(x => x.ID).Take(3).ToList(); //son 3 blogu getirmek icin
             return PartialView(values);
         }
     }

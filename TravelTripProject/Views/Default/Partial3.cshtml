@@ -1,0 +1,16 @@
+﻿@using TravelTripProject.Models.Classes
+@model List<Blog>
+
+<div class="padding">
+    <h4>En Populer 10 Blog</h4>
+    <ul class="list list-pad">
+        @{ int i = 0;} <!--to declare a variable inside this "Razor view file ('.cshtml')" /at server-side(C# code)-->
+        @foreach (var item in Model)
+        {
+            //i'nin degerini bir artirdiktan sonra listelemek icin;
+            <li class="list-bg"><span>@{i++;} @i.</span><a href="/Blog/BlogDetail/@item.ID">@item.Title</a></li>
+            //i++;
+        }
+    </ul>
+    <a href="/Blog/Index" class="link1">Tüm blogları gör</a>
+</div>
