@@ -22,16 +22,26 @@
         <tr>
             <td>@item.ID</td>
             <td>@item.Title</td>
-            <td><a href="#" class="btn btn-danger">Sil</a></td>
-            <td><a href="#" class="btn btn-warning">Güncelle</a></td>
-            <td><a href="#" class="btn btn-default">Detaylar</a></td>
+            <td><a href="/Admin/DeleteBlog/@item.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Admin/FindBlog/@item.ID" class="btn btn-warning">Güncelle</a></td>
+            <td><a href="/Blog/BlogDetail/@item.ID" class="btn btn-default btn-outline-dark">Detaylar</a></td>
         </tr>
     }
 </table>
-<a href="#" class="btn btn-primary">Yeni Blog</a>
-<nav aria-label="Page navigation">
-    <ul id="pagination" class="pagination justify-content-center">
-        <!-- Pagination links will be dynamically added here -->
-    </ul>
-</nav>
+
+<!-- Pagination -->
+<div class="text-center">
+    Page @ViewBag.CurrentPage of @Math.Ceiling((double)ViewBag.TotalBlogs / ViewBag.PageSize)
+    <br />
+    @if (ViewBag.CurrentPage > 1)
+    {
+        <a class="btn btn-success" href="@Url.Action("Index", new { page = ViewBag.CurrentPage - 1, pageSize = ViewBag.PageSize })">Previous</a>
+    }
+    @if (ViewBag.CurrentPage < Math.Ceiling((double)ViewBag.TotalBlogs / ViewBag.PageSize))
+    {
+        <a class="btn btn-success" href="@Url.Action("Index", new { page = ViewBag.CurrentPage + 1, pageSize = ViewBag.PageSize })">Next</a>
+    }
+</div>
+<!-- Pagination -->
+<a href="/Admin/NewBlog/" class="btn btn-primary">Yeni Blog</a>
 

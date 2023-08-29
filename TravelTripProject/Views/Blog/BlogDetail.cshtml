@@ -69,16 +69,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </li>
                     </ul>
                 }
-
-                <div class="content-form">
-                    <h3>Yorum birak</h3>
-                    <form>
-                        <input type="text" placeholder="Kullanici adi" required />
-                        <input type="text" placeholder="Mail adresi" required />
-                        <textarea placeholder="Yorum"></textarea>
-                        <input type="submit" value="GONDER" />
-                    </form>
-                </div>
+                @Html.Action("MakeComment", "Blog") @*PartialView uzerinden cagrilir*@
             </div>
 
             <div class="col-md-4 side-content">

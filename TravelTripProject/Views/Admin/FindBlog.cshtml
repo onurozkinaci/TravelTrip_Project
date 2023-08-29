@@ -1,0 +1,29 @@
+﻿@model TravelTripProject.Models.Classes.Blog
+
+@{
+    ViewBag.Title = "FindBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Blog Güncelleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("BlogUpdate", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.ID)
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" }) @*'@readonly' ile girilebilir bir text alani olmasi (enabled ozelligi) engellendi.*@
+    <br />
+    @Html.LabelFor(x => x.Title)
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Date)
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.BlogImage)
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Description)
+    @Html.TextAreaFor(x => x.Description, 15, 1, new { @class = "form-control" }) @*15 rows,1 column size*@
+    <br />
+    <button class="btn btn-success">Blog Güncelle</button>
+}
+
