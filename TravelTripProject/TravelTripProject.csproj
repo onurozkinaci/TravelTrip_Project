@@ -132,6 +132,7 @@
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -193,6 +194,10 @@
     <Content Include="web2\js\move-top.js" />
     <Content Include="web2\single.html" />
     <Content Include="web2\w3layouts-License.txt" />
+    <Content Include="weblogintema\css\style.css" />
+    <Content Include="weblogintema\images\b4.jpg" />
+    <Content Include="weblogintema\index.html" />
+    <Content Include="weblogintema\w3layouts-License.txt" />
     <Content Include="web\about.html" />
     <Content Include="web\contact.html" />
     <Content Include="web\css\slider.css" />
@@ -273,6 +278,10 @@
     <Content Include="Views\Admin\FindBlog.cshtml" />
     <Content Include="Views\Blog\MakeComment.cshtml" />
     <Content Include="Views\Admin\CommentList.cshtml" />
+    <Content Include="Views\Admin\FindComment.cshtml" />
+    <Content Include="weblogintema\fonts\Asap-Regular.ttf" />
+    <Content Include="weblogintema\fonts\Audiowide-Regular.ttf" />
+    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

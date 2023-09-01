@@ -26,8 +26,8 @@
             <td>@item.Mail</td>
             <td>@item.Comment</td>
             <td>@item.Blog.Title</td> @*BlogId'ye sahip olan nesne uzerinden direkt Title'a erisilebilir.*@
-            <td><a class="btn btn-danger" href="#">Sil</a></td>
-            <td><a class="btn btn-warning" href="#">Güncelle</a></td>
+            <td><a class="btn btn-danger" href="/Admin/DeleteComment/@item.ID">Sil</a></td>
+            <td><a class="btn btn-warning" href="/Admin/FindComment/@item.ID">Güncelle</a></td>
         </tr>
     }
 </table>
