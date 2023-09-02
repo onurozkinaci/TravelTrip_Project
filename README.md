@@ -1,4 +1,4 @@
-## Travel and Trip Website
+## Travel and Trip (TravelnTrip) Website
 **Bu websitesini oluştururken ASP.NET MVC5 mimarisi kullanıldı.**
 
 Admin paneli ve kullanıcı arayüzünü ayıracak şekilde authentication kullanımına başvuruldu. 
