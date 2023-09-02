@@ -6,7 +6,7 @@ Admin paneli ve kullanıcı arayüzünü ayıracak şekilde authentication kulla
 Admin panelinden seyahat edilen yerler ile ilgili blogların oluşturulması, güncellenmesi ve silinmesi gibi işlemlerin uygulanabilirken, kullanıcıların da blog detaylarından bloglarla ilgili yorum yapması 
 ve seyahat edilebilecek lokasyonlarla ilgili blogları okuyarak bilgi sahibi olmaları hedeflendi. 
 
-Ek olarak, Admin Paneli üzerinden kullanıcıların yapmış olduğu yorumların güncellenmesi veya silinmesi olanağı sağlandı.
+Ek olarak, Admin Paneli üzerinden kullanıcıların yapmış olduğu yorumların güncellenmesi veya silinmesi olanağı tanındı.
 
 Aşağıdaki link üzerinden admin yetkisi olan bir kullanıcı hesabı ile giriş yaparak admin paneline erişebilir
 
